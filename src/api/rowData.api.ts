@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "https://www.ag-grid.com/example-assets"
+const BASE_URL = "http://localhost:5000"
 
 export const axiosInternal = axios.create({
     baseURL: BASE_URL

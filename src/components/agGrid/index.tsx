@@ -8,16 +8,13 @@ import 'ag-grid-community/styles/ag-theme-alpine.css';
 import { rows } from '../../api/rowData';
 
 function MyAgGrid() {
-  const [rowData, setRowData] = useState([
-    { make: 'Ford', model: 'Fokus', price: 40000 },
-    { make: 'Toyota', model: 'Celica', price: 45000 },
-    { make: 'BMW', model: '4 series', price: 50000 },
-  ]);
+  const [rowData, setRowData] = useState();
 
   const [columnDefs, setColumnDefs] = useState([
-    { field: 'make' },
-    { field: 'model' },
-    { field: 'price' },
+    { field: 'name' },
+    { field: 'job' },
+    { field: 'salary' },
+    { field: 'hiring' },
   ]);
 
   const defaultColDef = useMemo(()=> ({
@@ -27,8 +24,8 @@ function MyAgGrid() {
 
 
   useEffect(() => {
-   const datas = rows.getAll().then((r) => {
-    setRowData(r.data)
+   const datas = rows.getAll().then((r) => {    
+    setRowData(r.data.query)
    })
    })
 

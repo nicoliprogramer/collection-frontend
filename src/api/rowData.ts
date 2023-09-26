@@ -1,6 +1,6 @@
 import { axiosInternal } from "./rowData.api"
 
-const endpoint = `/row-data.json`
+const endpoint = `/employees`
 
 export const rows = {
     getAll: function(){
