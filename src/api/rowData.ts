@@ -2,7 +2,7 @@ import { axiosInternal } from "./rowData.api"
 
 const endpoint = `/employees`
 
-export const rows = {
+export const dbRows = {
     getAll: function(){
         return axiosInternal.get(endpoint)
     },

@@ -1,8 +1,8 @@
-import MyAgGrid from './components/agGrid';
+import Employees from './pages/employees';
 
 function App() {
   return (
-   <MyAgGrid/>
+   <Employees/>
   ) 
 };
 
